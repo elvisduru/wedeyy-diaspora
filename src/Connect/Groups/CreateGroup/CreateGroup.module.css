@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   z-index: 101;
+  justify-content: space-between;
 }
 
 .CreateGroup * {
@@ -20,7 +21,7 @@
   border-color: inherit;
 }
 
-.CreateGroup > input {
+.CreateGroup > .formGroup > input {
   width: 100%;
   height: 39.5px;
   line-height: 37px;
@@ -30,6 +31,7 @@
   font-size: 25px;
   color: #0d0d0d;
   font-family: heeboextrabold;
+  outline: none;
 }
 
 .CreateGroup > input::placeholder {
@@ -62,8 +64,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 60px;
-  margin-bottom: 65px;
 }
 
 .profilePic img {

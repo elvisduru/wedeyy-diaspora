@@ -79,75 +79,80 @@ class CreateGroup extends Component {
         <div className={styles.profilePic}>
           <img src={cameraIcon} alt="" />
         </div>
-        <input type="text" placeholder="Enter Group Name" />
-        <form>
-          <ul className={styles.select}>
-            <li>
-              <input
-                className={styles.select_close}
-                type="radio"
-                name="group"
-                id="awesomeness-close"
-                value=""
-              />
-              <span
-                className={cx(
-                  styles.select_label,
-                  styles.select_label_placeholder
-                )}
-              >
-                Select Group Type
-              </span>
-            </li>
+        <div className={styles.formGroup}>
+          <input type="text" placeholder="Enter Group Name" />
+          <form>
+            <ul className={styles.select}>
+              <li>
+                <input
+                  className={styles.select_close}
+                  type="radio"
+                  name="group"
+                  id="awesomeness-close"
+                  value=""
+                />
+                <span
+                  className={cx(
+                    styles.select_label,
+                    styles.select_label_placeholder
+                  )}
+                >
+                  Select Group Type
+                </span>
+              </li>
 
-            <li className={styles.select_items}>
-              <input
-                className={styles.select_expand}
-                type="radio"
-                name="group"
-                id="group-opener"
-              />
-              <label
-                className={styles.select_closeLabel}
-                htmlFor="awesomeness-close"
-              />
+              <li className={styles.select_items}>
+                <input
+                  className={styles.select_expand}
+                  type="radio"
+                  name="group"
+                  id="group-opener"
+                />
+                <label
+                  className={styles.select_closeLabel}
+                  htmlFor="awesomeness-close"
+                />
 
-              <ul className={styles.select_options}>
-                <li className={styles.select_option}>
-                  <input
-                    className={styles.select_input}
-                    type="radio"
-                    name="group"
-                    id="group-family"
-                  />
-                  <label className={styles.select_label} htmlFor="group-family">
-                    Family
-                  </label>
-                </li>
+                <ul className={styles.select_options}>
+                  <li className={styles.select_option}>
+                    <input
+                      className={styles.select_input}
+                      type="radio"
+                      name="group"
+                      id="group-family"
+                    />
+                    <label
+                      className={styles.select_label}
+                      htmlFor="group-family"
+                    >
+                      Family
+                    </label>
+                  </li>
 
-                <li className={styles.select_option}>
-                  <input
-                    className={styles.select_input}
-                    type="radio"
-                    name="group"
-                    id="group-community"
-                  />
-                  <label
-                    className={styles.select_label}
-                    htmlFor="group-community"
-                  >
-                    Community
-                  </label>
-                </li>
-              </ul>
+                  <li className={styles.select_option}>
+                    <input
+                      className={styles.select_input}
+                      type="radio"
+                      name="group"
+                      id="group-community"
+                    />
+                    <label
+                      className={styles.select_label}
+                      htmlFor="group-community"
+                    >
+                      Community
+                    </label>
+                  </li>
+                </ul>
 
-              <label
-                className={styles.select_expandLabel}
-                htmlFor="group-opener"
-              />
-            </li>
-          </ul>
-        </form>
+                <label
+                  className={styles.select_expandLabel}
+                  htmlFor="group-opener"
+                />
+              </li>
+            </ul>
+          </form>
+        </div>
         <button className={styles.next} onClick={this.openParticipantsOverlay}>
           <img src={chevronRightIcon} alt="next" />
         </button>
