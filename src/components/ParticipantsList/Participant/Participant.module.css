@@ -1,0 +1,43 @@
+.Participant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 28px 0;
+}
+
+.Participant > div {
+  display: flex;
+  font-size: 15px;
+  line-height: 22px;
+  font-family: heebobold;
+  align-items: center;
+  color: #343b3b;
+}
+
+.Participant > div img {
+  width: 52px;
+  border: 1px solid #707070;
+  border-radius: 50%;
+  margin-right: 18px;
+}
+
+.Participant button {
+  color: #343b3b;
+  font-family: heebomedium;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 6px 13px;
+  background-color: #f5f6f6;
+  border: none;
+  border-radius: 2px;
+  width: 71px;
+}
+
+.Participant > div.added {
+  font-family: heeboextrabold;
+}
+
+.Participant button.added {
+  color: white;
+  background-color: #30558f;
+}

@@ -1,0 +1,11 @@
+.Chats > div:last-child {
+  margin-top: 43px;
+}
+
+.Chats > div > h2 {
+  font-family: heeboextrabold;
+  font-size: 25px;
+  color: #0d0d0d;
+  margin-bottom: 15px;
+  margin-top: 22px;
+}

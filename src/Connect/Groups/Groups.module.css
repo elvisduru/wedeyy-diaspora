@@ -1,0 +1,23 @@
+.Groups > a {
+  width: 100%;
+  font-family: heebomedium;
+  color: #434343;
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color: #f5f6f6;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  outline: none;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+}
+
+.Groups > h2 {
+  font-family: heeboextrabold;
+  font-size: 25px;
+  color: #0d0d0d;
+  margin-bottom: 15px;
+  margin-top: 22px;
+}

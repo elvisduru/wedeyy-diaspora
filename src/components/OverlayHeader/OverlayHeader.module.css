@@ -1,0 +1,11 @@
+.OverlayHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.OverlayHeader h2 {
+  font-family: heeboextrabold;
+  font-size: 25px;
+  line-height: 37px;
+}

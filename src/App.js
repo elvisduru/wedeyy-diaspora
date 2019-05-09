@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import "./App.css";
+import Chats from "./Connect/Chats/Chats";
+import ConnectHeader from "./components/ConnectHeader/ConnectHeader";
+import Contacts from "./Connect/Contacts/Contacts";
+import Drawer from "./containers/Drawer/Drawer";
+import Groups from "./Connect/Groups/Groups";
+import Calls from "./Connect/Calls/Calls";
+import CreateGroup from "./Connect/Groups/CreateGroup/CreateGroup";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <ConnectHeader />
+        <div className="main">
+          <Switch>
+            <Route path="/" exact component={Chats} />
+            <Route path="/contacts" exact component={Contacts} />
+            <Route path="/groups" exact component={Groups} />
+            <Route path="/calls" exact component={Calls} />
+            <Route path="/creategroup" exact component={CreateGroup} />
+            <Redirect to="/" />
+          </Switch>
+        </div>
+        <Drawer />
+      </BrowserRouter>
     </div>
   );
 }
