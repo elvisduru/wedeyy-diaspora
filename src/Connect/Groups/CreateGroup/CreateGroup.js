@@ -28,21 +28,6 @@ class CreateGroup extends Component {
       {
         name: "Chas Mccawley",
         avatar: "http://i.pravatar.cc/101",
-        added: true
-      },
-      {
-        name: "Karyl Philpott",
-        avatar: "http://i.pravatar.cc/102",
-        added: false
-      },
-      {
-        name: "Eugene Rosen",
-        avatar: "http://i.pravatar.cc/103",
-        added: false
-      },
-      {
-        name: "Chas Mccawley",
-        avatar: "http://i.pravatar.cc/101",
         added: false
       },
       {
@@ -82,7 +67,7 @@ class CreateGroup extends Component {
           <button onClick={this.closeParticipantsOverlay}>
             <img src={chevronRightIcon} alt="left" className={styles.left} />
           </button>
-          <button onClick={this.closeParticipantsOverlay}>
+          <button onClick={this.goBack}>
             <img src={chevronRightIcon} alt="right" />
           </button>
         </div>
