@@ -8,7 +8,7 @@ const Options = props => {
       <div className={styles.content} onClick={props.stopPropagation}>
         <div className={styles.header}>
           <img src={crossIcon} alt="close" onClick={props.click} />
-          <h3>Create and Share</h3>
+          <h3>{props.heading}</h3>
         </div>
         <div className={styles.options}>
           {props.options.map((option, index) => (

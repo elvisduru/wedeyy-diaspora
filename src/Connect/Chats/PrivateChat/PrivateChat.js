@@ -13,10 +13,14 @@ import pictureIcon from "../../../images/picture.svg";
 import addFileIcon from "../../../images/file-add.svg";
 import userIcon from "../../../images/user.svg";
 import ChatBubbleList from "../../../components/ChatBubbleList/ChatBubbleList";
+import shareIcon from "../../../images/share.svg";
+import usersIcon from "../../../images/users.svg";
+import trashIcon from "../../../images/trash.svg";
 
 class PrivateChat extends Component {
   state = {
     openShareOverlay: false,
+    openMoreOverlay: false,
     messages: [
       { type: "text", content: "Hello Kehinde", sender: "you" },
       { type: "text", content: "I am coming home now...", sender: "you" },
@@ -62,6 +66,15 @@ class PrivateChat extends Component {
     });
   };
 
+  handleMoreOverlay = e => {
+    e.stopPropagation();
+    this.setState((state, props) => {
+      return {
+        openMoreOverlay: !this.state.openMoreOverlay
+      };
+    });
+  };
+
   stopEventPropagation = e => {
     e.stopPropagation();
   };
@@ -74,11 +87,29 @@ class PrivateChat extends Component {
     ];
     let shareOverlay = this.state.openShareOverlay ? (
       <OptionsOverlay
+        heading="Create and Share"
         options={shareOptions}
         click={this.handleShareOverlay}
         stopPropagation={this.stopEventPropagation}
       />
     ) : null;
+
+    let moreOptions = [
+      { icon: shareIcon, name: "View Shared Items" },
+      { icon: userIcon, name: "View Chas Profile" },
+      { icon: usersIcon, name: "Create a group with Chas" },
+      { icon: trashIcon, name: "Clear Chat" }
+    ];
+
+    let moreOverlay = this.state.openMoreOverlay ? (
+      <OptionsOverlay
+        heading="More"
+        options={moreOptions}
+        click={this.handleMoreOverlay}
+        stopPropagation={this.stopEventPropagation}
+      />
+    ) : null;
+
     return (
       <div className={styles.PrivateChat}>
         <div className={styles.Header}>
@@ -96,7 +127,7 @@ class PrivateChat extends Component {
           <Link to="/voice-call">
             <img className={styles.phone} src={phoneIcon} alt="call" />
           </Link>
-          <img src={moreIcon} alt="more" />
+          <img src={moreIcon} alt="more" onClick={this.handleMoreOverlay} />
         </div>
         <div className={styles.chatWrapper}>
           <ChatBubbleList messages={this.state.messages} />
@@ -114,6 +145,7 @@ class PrivateChat extends Component {
           </div>
         </div>
         {shareOverlay}
+        {moreOverlay}
       </div>
     );
   }
