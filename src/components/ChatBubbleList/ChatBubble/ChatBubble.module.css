@@ -1,14 +1,25 @@
 .ChatBubble {
   display: flex;
   width: 100%;
+  justify-content: flex-end;
+  margin-bottom: 2px;
 }
 
-.ChatBubble > * {
-  margin-left: auto;
-  margin-right: 0;
+.ChatBubble > p {
+  padding: 8px;
+  background-color: rgba(72, 169, 166, 0.4);
+  border-radius: 5px 0 0 5px;
 }
 
 .left {
-  margin-right: auto;
-  margin-left: 0;
+  justify-content: flex-start;
+}
+
+.left > p {
+  background-color: rgba(245, 246, 246, 1);
+  border-radius: 0 5px 5px 0;
+}
+
+.ChatBubble > * + .left > * {
+  margin-top: 20px;
 }
