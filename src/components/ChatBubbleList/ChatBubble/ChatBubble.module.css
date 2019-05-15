@@ -11,6 +11,10 @@
   border-radius: 5px 0 0 5px;
 }
 
+.ChatBubble > img {
+  border-radius: 5px;
+}
+
 .left {
   justify-content: flex-start;
 }
@@ -20,6 +24,10 @@
   border-radius: 0 5px 5px 0;
 }
 
-.ChatBubble > * + .left > * {
-  margin-top: 20px;
+.left + .ChatBubble:not(.left) {
+  margin-top: 25px;
+}
+
+.ChatBubble:not(.left) + .left {
+  margin-top: 25px;
 }
