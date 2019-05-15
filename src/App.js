@@ -11,6 +11,7 @@ import CreateGroup from "./Connect/Groups/CreateGroup/CreateGroup";
 import PrivateChat from "./Connect/Chats/PrivateChat/PrivateChat";
 import VideoCall from "./Connect/Chats/PrivateChat/VideoCall/VideoCall";
 import VoiceCall from "./Connect/Chats/PrivateChat/VoiceCall/VoiceCall";
+import SharedItems from "./Connect/Chats/PrivateChat/SharedItems/SharedItems";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/private-chat" exact component={PrivateChat} />
             <Route path="/video-call" exact component={VideoCall} />
             <Route path="/voice-call" exact component={VoiceCall} />
+            <Route path="/shared-items" exact component={SharedItems} />
             <Redirect to="/" />
           </Switch>
         </div>
