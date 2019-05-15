@@ -1,0 +1,14 @@
+.ChatBubble {
+  display: flex;
+  width: 100%;
+}
+
+.ChatBubble > * {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.left {
+  margin-right: auto;
+  margin-left: 0;
+}

@@ -8,6 +8,9 @@ import Drawer from "./containers/Drawer/Drawer";
 import Groups from "./Connect/Groups/Groups";
 import Calls from "./Connect/Calls/Calls";
 import CreateGroup from "./Connect/Groups/CreateGroup/CreateGroup";
+import PrivateChat from "./Connect/Chats/PrivateChat/PrivateChat";
+import VideoCall from "./Connect/Chats/PrivateChat/VideoCall/VideoCall";
+import VoiceCall from "./Connect/Chats/PrivateChat/VoiceCall/VoiceCall";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
             <Route path="/groups" exact component={Groups} />
             <Route path="/calls" exact component={Calls} />
             <Route path="/creategroup" exact component={CreateGroup} />
+            <Route path="/private-chat" exact component={PrivateChat} />
+            <Route path="/video-call" exact component={VideoCall} />
+            <Route path="/voice-call" exact component={VoiceCall} />
             <Redirect to="/" />
           </Switch>
         </div>

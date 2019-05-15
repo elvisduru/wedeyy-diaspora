@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./ContactList.module.css";
 import Contact from "./Contact/Contact";
 
@@ -6,24 +7,26 @@ const ContactList = props => {
   let contacts;
   if (props.groupList) {
     contacts = props.contacts.map((contact, index) => (
-      <Contact
-        name={contact.name}
-        avatar={contact.avatar}
-        lastMessage={contact.lastMessage}
-        time={contact.time}
-        key={contact.name + index}
-        lastUser={contact.lastUser}
-      />
+      <Link to="/private-chat" key={contact.name + index}>
+        <Contact
+          name={contact.name}
+          avatar={contact.avatar}
+          lastMessage={contact.lastMessage}
+          time={contact.time}
+          lastUser={contact.lastUser}
+        />
+      </Link>
     ));
   } else {
     contacts = props.contacts.map((contact, index) => (
-      <Contact
-        name={contact.name}
-        avatar={contact.avatar}
-        lastMessage={contact.lastMessage}
-        time={contact.time}
-        key={contact.name + index}
-      />
+      <Link to="/private-chat" key={contact.name + index}>
+        <Contact
+          name={contact.name}
+          avatar={contact.avatar}
+          lastMessage={contact.lastMessage}
+          time={contact.time}
+        />
+      </Link>
     ));
   }
   return (
