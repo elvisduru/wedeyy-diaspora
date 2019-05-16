@@ -73,6 +73,18 @@ class ChatBubble extends Component {
       )
     }
 
+    if (this.props.message.type === "file") {
+      message = (
+        <div className={styles.file}>
+          <div>
+            <p>{this.props.message.filename}</p>
+            <small>{this.props.message.filetype}, {this.props.message.filesize}</small>
+          </div>
+          <button>Download</button>
+        </div>
+      )
+    }
+
     if (this.props.message.type === "missed") {
       message = <p className={styles.missed}>{this.props.message.content}</p>
     }

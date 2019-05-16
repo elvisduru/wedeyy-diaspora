@@ -68,7 +68,8 @@
 }
 
 .link,
-.contact {
+.contact,
+.file {
   min-width: 247px;
   max-width: 247px;
   display: flex;
@@ -131,4 +132,37 @@
 
 .contact .bottom {
   display: flex;
+}
+
+.file {
+  margin-top: 10px;
+}
+
+.file > div {
+  padding: 15px 23px;
+}
+
+.file p {
+  color: #343b3b;
+  font-family: heebobold;
+  line-height: 35px;
+  font-size: 24px;
+}
+
+.file small {
+  font-size: 12px;
+  color: #434343;
+  line-height: 18px;
+}
+
+.file button {
+  background-color: transparent;
+  border: none;
+  border-top: 0.4px solid #e3e3e3;
+  font-size: 24px;
+  color: #343b3b;
+  font-family: "Nunito";
+  font-weight: bold;
+  line-height: 32px;
+  padding: 10px;
 }

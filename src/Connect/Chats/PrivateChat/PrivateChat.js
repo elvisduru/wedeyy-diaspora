@@ -38,6 +38,7 @@ class PrivateChat extends Component {
       { type: "text", content: "Wait for it.", sender: "you", time: "Chas, 10:25 AM" },
       { type: "image", content: "http://i.pravatar.cc/251", sender: "you", time: "Chas, 10:25 AM" },
       { type: "text", content: "File coming in now.", sender: "me", time: "10:26 AM" },
+      { type: "file", filename: "Temple Run.APK", filetype: "APK file", filesize: "32.03MB", sender: "me", time: "10:25 AM" },
       { type: "text", content: "Please send me that link", sender: "you", time: "Chas, 10:25 AM" },
       { type: "link", content: "https://m.youtube.com/watch/UGFi7v8", sender: "me", time: "10:26 AM" },
       { type: "text", content: "Wow, thanks.", sender: "you", time: "Chas, 10:25 AM" },
