@@ -23,34 +23,36 @@ class PrivateChat extends Component {
     openOptionsOverlay: false,
     openMoreOverlay: false,
     messages: [
-      { type: "text", content: "Hello Kehinde", sender: "you" },
-      { type: "text", content: "I am coming home now...", sender: "you" },
-      { type: "text", content: "Okay, see you soon.", sender: "me" },
-      { type: "text", content: "Hello Kehinde", sender: "you" },
-      { type: "text", content: "I am coming home now...", sender: "you" },
+      { type: "text", content: "Hello Kehinde", sender: "you", time: "Chas, 10:25 AM" },
+      { type: "text", content: "I am coming home now...", sender: "you", time: "Chas, 10:25 AM" },
+      { type: "text", content: "Okay, see you soon.", sender: "me", time: "10:26 AM" },
+      { type: "text", content: "Hello Kehinde", sender: "you", time: "Chas, 10:25 AM" },
+      { type: "text", content: "I am coming home now...", sender: "you", time: "Chas, 10:25 AM" },
       { type: "divider", content: "Yesterday" },
-      { type: "text", content: "Hello, how are you doing?", sender: "me" },
-      { type: "text", content: "Hello Kehinde", sender: "you" },
-      { type: "text", content: "I am coming home now...", sender: "you" },
-      { type: "text", content: "Hello, how are you doing?", sender: "me" },
-      { type: "image", content: "http://i.pravatar.cc/250", sender: "me" },
-      { type: "text", content: "Oh, what a beautiful picture.", sender: "you" },
-      { type: "text", content: "Wait for it.", sender: "you" },
-      { type: "image", content: "http://i.pravatar.cc/251", sender: "you" },
-      { type: "text", content: "File coming in now.", sender: "me" },
-      { type: "text", content: "Please send me that link", sender: "you" },
-      { type: "text", content: "Wow, thanks.", sender: "you" },
+      { type: "text", content: "Hello, how are you doing?", sender: "me", time: "10:26 AM" },
+      { type: "text", content: "Hello Kehinde", sender: "you", time: "Chas, 10:25 AM" },
+      { type: "text", content: "I am coming home now...", sender: "you", time: "Chas, 10:25 AM" },
+      { type: "text", content: "Hello, how are you doing?", sender: "me", time: "10:26 AM" },
+      { type: "image", content: "http://i.pravatar.cc/250", sender: "me", time: "10:26 AM" },
+      { type: "text", content: "Oh, what a beautiful picture.", sender: "you", time: "Chas, 10:25 AM" },
+      { type: "text", content: "Wait for it.", sender: "you", time: "Chas, 10:25 AM" },
+      { type: "image", content: "http://i.pravatar.cc/251", sender: "you", time: "Chas, 10:25 AM" },
+      { type: "text", content: "File coming in now.", sender: "me", time: "10:26 AM" },
+      { type: "text", content: "Please send me that link", sender: "you", time: "Chas, 10:25 AM" },
+      { type: "link", content: "https://m.youtube.com/watch/UGFi7v8", sender: "me", time: "10:26 AM" },
+      { type: "text", content: "Wow, thanks.", sender: "you", time: "Chas, 10:25 AM" },
       {
         type: "text",
         content: "Sending you the contacts you asked for..",
-        sender: "you"
+        sender: "you", time: "Chas, 10:25 AM"
       },
       {
         type: "contact",
         content: "Kehinde John Omotoso",
         rating: "3",
-        sender: "you"
-      }
+        sender: "you", time: "Chas, 10:25 AM"
+      },
+      { type: "missed", content: "Missed Video Call, 10:23 am", sender: "you", time: "Chas, 10:25 AM" }
     ]
   };
 

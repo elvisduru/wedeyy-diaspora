@@ -1,14 +1,31 @@
 .ChatBubble {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  justify-content: flex-end;
+  align-items: flex-end;
   margin-bottom: 2px;
 }
 
-.ChatBubble > p {
+.ChatBubble > p:not(.missed):not(.time) {
   padding: 8px;
   background-color: rgba(72, 169, 166, 0.4);
   border-radius: 5px 0 0 5px;
+}
+
+.missed {
+  color: #e74d3d;
+  font-family: "Nunito";
+  font-weight: 500;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.time {
+  color: #343b3b;
+  font-family: "Nunito";
+  font-weight: 100;
+  font-size: 12px;
 }
 
 .ChatBubble > img {
@@ -16,10 +33,10 @@
 }
 
 .left {
-  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.left > p {
+.left > p:not(.missed):not(.time) {
   background-color: rgba(245, 246, 246, 1);
   border-radius: 0 5px 5px 0;
 }
@@ -30,4 +47,88 @@
 
 .ChatBubble:not(.left) + .left {
   margin-top: 25px;
+}
+
+.divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-family: "Nunito";
+  font-weight: 200;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.divider div {
+  width: 125px;
+  height: 1px;
+  background-color: #cfcfcf;
+}
+
+.link,
+.contact {
+  min-width: 247px;
+  max-width: 247px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  background-color: rgba(245, 246, 246, 1);
+}
+
+.link img,
+.contact img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 165px;
+  max-height: 165px;
+  border-radius: 3px 3px 0 0;
+}
+
+.link small {
+  font-size: 15px;
+  color: #434343;
+  padding: 13px;
+  word-wrap: break-word;
+}
+
+.link button {
+  font-size: 20px;
+  font-family: "Nunito";
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  border-radius: 0 0 3px 3px;
+  padding: 13px;
+  border-top: 0.4px solid #e3e3e3;
+  color: #434343;
+}
+
+.contact button {
+  font-size: 16px;
+  vertical-align: middle;
+  font-family: "Nunito";
+  font-weight: bold;
+  color: #343b3b;
+  padding: 13px;
+  background-color: transparent;
+  border: none;
+  border-top: 0.4px solid #e3e3e3;
+  flex-grow: 1;
+}
+
+.contact button:first-of-type {
+  border-right: 0.4px solid #e3e3e3;
+}
+
+.contact .top {
+  color: #434343;
+  font-family: heebobold;
+  font-size: 21px;
+  padding: 13px;
+}
+
+.contact .bottom {
+  display: flex;
 }
