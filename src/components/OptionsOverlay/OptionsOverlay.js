@@ -12,25 +12,38 @@ const Options = props => {
           <h3>{props.heading}</h3>
         </div>
         <div className={styles.options}>
-          {props.options.map((option, index) =>
-            option.name === "View Shared Items" ? (
-              <Link to="/shared-items" key={option.name + index}>
-                <div className={styles.option}>
+          {props.options.map((option, index) => {
+            if (option.name === "View Shared Items") {
+              return (
+                <Link to="/shared-items" key={option.name + index}>
+                  <div className={styles.option}>
+                    <div>
+                      <img src={option.icon} alt="" />
+                    </div>
+                    <p>{option.name}</p>
+                  </div>
+                </Link>
+              )
+            } else if (option.name.startsWith("Share")) {
+              return (
+                <div className={styles.option} key={option.name + index} onClick={props.openShareOverlay}>
                   <div>
                     <img src={option.icon} alt="" />
                   </div>
                   <p>{option.name}</p>
                 </div>
-              </Link>
-            ) : (
-              <div className={styles.option} key={option.name + index}>
-                <div>
-                  <img src={option.icon} alt="" />
+              )
+            } else {
+              return (
+                <div className={styles.option} key={option.name + index}>
+                  <div>
+                    <img src={option.icon} alt="" />
+                  </div>
+                  <p>{option.name}</p>
                 </div>
-                <p>{option.name}</p>
-              </div>
-            )
-          )}
+              )
+            }
+          })}
         </div>
       </div>
     </div>

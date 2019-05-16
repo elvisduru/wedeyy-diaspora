@@ -16,10 +16,11 @@ import ChatBubbleList from "../../../components/ChatBubbleList/ChatBubbleList";
 import shareIcon from "../../../images/share.svg";
 import usersIcon from "../../../images/users.svg";
 import trashIcon from "../../../images/trash.svg";
+import ShareList from "../../../components/ShareList/ShareList";
 
 class PrivateChat extends Component {
   state = {
-    openShareOverlay: false,
+    openOptionsOverlay: false,
     openMoreOverlay: false,
     messages: [
       { type: "text", content: "Hello Kehinde", sender: "you" },
@@ -57,11 +58,11 @@ class PrivateChat extends Component {
     this.props.history.goBack();
   };
 
-  handleShareOverlay = e => {
+  handleOptionsOverlay = e => {
     e.stopPropagation();
     this.setState((state, props) => {
       return {
-        openShareOverlay: !this.state.openShareOverlay
+        openOptionsOverlay: !this.state.openOptionsOverlay
       };
     });
   };
@@ -79,18 +80,27 @@ class PrivateChat extends Component {
     e.stopPropagation();
   };
 
+  openShareOverlay = () => {
+    this.setState({ openShareOverlay: true, openMoreOverlay: false })
+  }
+
+  closeShareOverlay = () => {
+    this.setState({ openShareOverlay: false })
+  }
+
   render() {
     let shareOptions = [
       { icon: pictureIcon, name: "Picture or Video" },
       { icon: addFileIcon, name: "Share File" },
       { icon: userIcon, name: "Share Friend" }
     ];
-    let shareOverlay = this.state.openShareOverlay ? (
+    let optionsOverlay = this.state.openOptionsOverlay ? (
       <OptionsOverlay
         heading="Create and Share"
         options={shareOptions}
-        click={this.handleShareOverlay}
+        click={this.handleOptionsOverlay}
         stopPropagation={this.stopEventPropagation}
+        openShareOverlay={this.openShareOverlay}
       />
     ) : null;
 
@@ -108,6 +118,43 @@ class PrivateChat extends Component {
         click={this.handleMoreOverlay}
         stopPropagation={this.stopEventPropagation}
       />
+    ) : null;
+
+    let contacts = [
+      {
+        name: "Chas Mccawley",
+        avatar: "http://i.pravatar.cc/101",
+        shared: true
+      },
+      {
+        name: "Karyl Philpott",
+        avatar: "http://i.pravatar.cc/102",
+        shared: false
+      },
+      {
+        name: "Eugene Rosen",
+        avatar: "http://i.pravatar.cc/103",
+        shared: false
+      },
+      {
+        name: "Chas Mccawley",
+        avatar: "http://i.pravatar.cc/101",
+        shared: false
+      },
+      {
+        name: "Karyl Philpott",
+        avatar: "http://i.pravatar.cc/102",
+        shared: false
+      },
+      {
+        name: "Eugene Rosen",
+        avatar: "http://i.pravatar.cc/103",
+        added: false
+      }
+    ]
+
+    let shareOverlay = this.state.openShareOverlay ? (
+      <ShareList contacts={contacts} shareType="contact" closeShareOverlay={this.closeShareOverlay} />
     ) : null;
 
     return (
@@ -138,14 +185,15 @@ class PrivateChat extends Component {
             <img
               src={attachIcon}
               alt="Attachment"
-              onClick={this.handleShareOverlay}
+              onClick={this.handleOptionsOverlay}
             />
             <img src={micIcon} alt="Mic" />
             <img src={smileyIcon} alt="Smiley" />
           </div>
         </div>
-        {shareOverlay}
         {moreOverlay}
+        {optionsOverlay}
+        {shareOverlay}
       </div>
     );
   }
