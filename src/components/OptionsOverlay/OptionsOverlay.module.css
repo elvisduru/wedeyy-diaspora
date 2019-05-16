@@ -16,6 +16,11 @@
   background-color: white;
 }
 
+.options {
+  height: 100%;
+  overflow-y: scroll;
+}
+
 .header {
   padding: 20px;
   display: flex;
