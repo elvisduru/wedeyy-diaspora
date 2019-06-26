@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="22.732" height="22.733" viewBox="0 0 22.732 22.733">
-  <path id="Path_255" data-name="Path 255" d="M15.456,7.419h-6.8V.618a.618.618,0,0,0-1.236,0v6.8H.618a.618.618,0,1,0,0,1.236h6.8v6.8a.618.618,0,0,0,1.236,0v-6.8h6.8a.618.618,0,1,0,0-1.236Z" transform="translate(11.366) rotate(45)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="25.456" height="25.456" viewBox="0 0 25.456 25.456">
+  <g id="plus-circle" transform="translate(12.728) rotate(45)">
+    <path id="Path_255" data-name="Path 255" d="M17.308,8.308H9.692V.692a.692.692,0,0,0-1.385,0V8.308H.692a.692.692,0,1,0,0,1.385H8.308v7.615a.692.692,0,0,0,1.385,0V9.692h7.615a.692.692,0,0,0,0-1.385Z" transform="translate(0)"/>
+  </g>
 </svg>

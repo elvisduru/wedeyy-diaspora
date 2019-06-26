@@ -1,0 +1,232 @@
+.Contribute {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1003;
+  background-color: rgba(240, 240, 240, 1);
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  padding: 17px;
+  font-size: 20px;
+  font-family: heebobold;
+  line-height: 29px;
+  color: rgba(58, 58, 58, 1);
+  box-shadow: 0 0 3px #e3e3e3;
+  background-color: white;
+}
+
+.Header > h2 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.Body {
+  padding: 10px;
+}
+
+.dropdownBox,
+.PostBox,
+.PoolBox {
+  box-shadow: 0 3px 6px rgba(57, 57, 57, 0.11);
+  border: 1px solid rgba(238, 238, 238, 1);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.PostBox {
+  position: relative;
+}
+
+.PoolBox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: none;
+  padding: 14px 11px;
+  border: none;
+}
+
+.dropdownBox {
+  color: rgba(100, 100, 100, 1);
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "Arial", sans-serif;
+}
+
+.dropdownBox > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 20px;
+}
+
+.dropdownBox > div:last-child {
+  display: none;
+}
+
+.dropdownBox > div:last-child > ul > li {
+  padding: 10px 0;
+}
+
+.dropdownBox > div:last-child > ul > li:first-child > div {
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+
+.dropdownBox > div:last-child > ul > li:first-child > ul {
+  display: none;
+  margin-left: 16px;
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.dropdownBox > div:last-child > ul > li:first-child > ul li:not(:last-child) {
+  padding: 10px 0;
+}
+
+.dropdownBox > div:last-child > ul > li:first-child > ul li:last-child {
+  padding-top: 10px;
+}
+
+.PostBox {
+  min-height: 483px;
+  margin-top: 9px;
+  padding: 14px 11px;
+}
+
+.PostBox > input,
+.PostBox > textarea,
+.PoolBox > textarea,
+.option > input {
+  padding: 7.5px 0;
+  font-family: heeboregular;
+  font-size: 14px;
+  line-height: 21px;
+  border: 0;
+  outline: none;
+}
+
+.PostBox > input {
+  border-bottom: 1px solid rgba(245, 246, 246, 1);
+}
+
+.PostBox > textarea {
+  flex-grow: 1;
+}
+
+.PostBox > input::placeholder,
+.PostBox > textarea::placeholder,
+.PoolBox > textarea::placeholder,
+.option > input::placeholder {
+  color: rgba(238, 238, 238, 1);
+}
+
+.Controls {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.Controls > div {
+  display: flex;
+  align-items: center;
+  color: rgba(100, 100, 100, 1);
+  font-size: 12px;
+  font-family: "Arial", sans-serif;
+  line-height: 14px;
+}
+
+.Controls > div button {
+  margin-right: 7.5px;
+}
+
+.Controls button:not(:last-child) {
+  background-color: rgba(245, 246, 246, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  width: 31px;
+  height: 31px;
+  padding-top: 2px;
+}
+
+.Controls > button:not(:last-child) {
+  margin-right: 17px;
+}
+
+.Controls > button:last-child {
+  padding: 6px 24px;
+  color: white;
+  background-color: rgba(81, 140, 162, 1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  font-family: heeboregular;
+  border: none;
+  margin-left: auto;
+}
+
+.Footer {
+  font-size: 13px;
+  color: rgba(100, 100, 100, 1);
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.Footer > * {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  width: 21px;
+  height: 21px;
+  border: 1px solid rgba(188, 224, 253, 1);
+  background-color: white;
+  margin-right: 7px;
+}
+
+.checked {
+  background-color: rgba(81, 140, 162, 1);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.option > input {
+  font-size: 12px;
+  line-height: 18px;
+  border: none;
+  border-bottom: 1px solid rgba(245, 246, 246, 1);
+  padding: 8px;
+  outline: none;
+  flex-grow: 1;
+}
+
+.option > button {
+  border: none;
+  padding: 5px 5px 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f6f6;
+  margin-right: 12.7px;
+}

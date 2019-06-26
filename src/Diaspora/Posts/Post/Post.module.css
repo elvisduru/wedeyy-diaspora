@@ -1,0 +1,132 @@
+.Post {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 1003;
+}
+
+.Header {
+  display: flex;
+  padding: 10px 15px;
+  box-shadow: 0 0 3px #e3e3e3;
+}
+
+.Header > img {
+  margin-right: 17px;
+}
+
+.Header > div {
+  display: flex;
+  align-items: center;
+}
+
+.Header > div > img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.Header > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.Header > div > div > h4 {
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.Header > div > div > p {
+  font-size: 10px;
+  font-family: "Nunito", sans-serif;
+  line-height: 14px;
+  font-weight: 100;
+}
+
+.Content h1,
+.Content .text,
+.Controls {
+  padding: 0 14px;
+}
+
+.Content {
+  overflow-y: scroll;
+  color: #3a3a3a;
+}
+
+.Content .text {
+  font-size: 15px;
+  line-height: 25px;
+  font-family: heeboregular;
+  margin-top: 20px;
+}
+
+.Content .text p {
+  margin-bottom: 20px;
+}
+
+.Content h1 {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  margin-top: 37px;
+  margin-bottom: 31px;
+}
+
+.Controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.Controls button {
+  border: none;
+  border-radius: 50%;
+  background-color: #f5f6f6;
+  vertical-align: middle;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  margin-left: 12px;
+  position: relative;
+}
+
+.Controls button img {
+  width: 20px;
+}
+
+.Controls button:last-of-type img {
+  width: 16px;
+}
+
+.Controls button span {
+  position: absolute;
+  color: rgba(251, 251, 251, 1);
+  top: -10px;
+  border-radius: 50%;
+  font-size: 9px;
+  font-family: "Nunito", sans-serif;
+  padding: 3px;
+  vertical-align: middle;
+}
+
+.Controls button span.happy {
+  background-color: rgba(79, 145, 196, 1);
+}
+
+.Controls button span.sad {
+  background-color: rgba(196, 79, 79, 1);
+}
+
+.Controls button span.comments {
+  background-color: rgba(58, 58, 58, 1);
+}

@@ -1,0 +1,51 @@
+.Posts {
+  margin-top: 63px;
+  margin-bottom: 63px;
+}
+
+.Categories {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9f9;
+  padding: 18px 12px;
+}
+
+.Categories > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Categories > .top {
+  margin-bottom: 19px;
+}
+
+.Categories > .top button {
+  background: none;
+  border: none;
+  color: #4fa0c9;
+  font-family: heebobold;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.Categories > .top h4 {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  font-family: heeboextrabold;
+}
+
+.Categories > .bottom > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+  font-family: heebomedium;
+}
+
+.Categories > .bottom > div img {
+  margin-bottom: 7px;
+}

@@ -1,0 +1,106 @@
+.Person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.Person:first-child {
+  padding-top: 30px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.Person button {
+  background-color: rgba(242, 242, 242, 1);
+  border: 1px solid rgba(242, 242, 242, 1);
+  border-radius: 5px;
+  padding: 0 18px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  font-family: heebomedium, sans-serif;
+  color: rgba(58, 58, 58, 1);
+  font-size: 9px;
+}
+
+.Person button img {
+  width: 18px;
+  margin-right: 3px;
+}
+
+.info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.info p {
+  font-size: 12px;
+  font-family: heebobold;
+}
+
+.info span {
+  font-family: heebolight;
+  font-size: 10px;
+}
+
+.checkboxButton {
+  cursor: pointer;
+}
+
+.Person input[type=checkbox] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.Person input {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 11px 23px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+.checkboxButton__input {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkboxButton__control {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-color: inherit;
+    color: #017b5f;
+    border: 2px solid #666;
+}
+
+.checkboxButton__input:checked+.checkboxButton__control:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    background-color: #01a982;
+}
+
+.checkboxButton__input:checked+.checkboxButton__control {
+    border-color: #01a982;
+}
+
+.checkboxButton__control {
+  transform: scale(0.75);
+}

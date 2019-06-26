@@ -1,0 +1,81 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 23px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.top > img {
+  width: 31px;
+  height: 31px;
+  border: 1px solid rgba(245, 246, 246, 1);
+  flex-shrink: 0;
+  border-radius: 50%;
+  margin-right: 11px;
+}
+
+.commentBox {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 15px;
+  background-color: rgba(245, 246, 246, 1);
+  border: 1px solid rgba(245, 246, 246, 1);
+  border-radius: 15px;
+}
+
+.commentBox > p {
+  font-size: 12px;
+  color: rgba(58, 58, 58, 1);
+  font-family: heeboregular;
+  line-height: 18px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  line-height: 22px;
+  font-family: heebomedium;
+}
+
+.header h4 {
+  color: #000000;
+  font-family: heebomedium;
+}
+
+.header img {
+  width: 4px;
+  transform: rotate(90deg);
+  margin-right: 4px;
+}
+
+.bottom {
+  display: flex;
+  font-size: 11px;
+  font-family: heebomedium;
+  margin-left: 41px;
+  margin-top: 10px;
+}
+
+.bottom span {
+  margin-right: 25px;
+  color: #888888;
+}
+
+.bottom span mark {
+  color: rgba(79, 145, 196, 1);
+  font-size: 9px;
+  font-family: heebomedium;
+  line-height: 13px;
+  border-radius: 50%;
+  padding: 2px 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.28);
+  background-color: transparent;
+}

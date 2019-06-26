@@ -1,0 +1,131 @@
+.Feed {
+  display: flex;
+  flex-direction: column;
+  color: #3a3a3a;
+  margin-bottom: 23px;
+}
+
+.textBackground {
+  background-color: rgba(248, 249, 249, 1);
+}
+
+.Feed:last-child {
+  margin-bottom: 83px;
+}
+
+.Header,
+.Footer,
+.description {
+  padding: 0 12px;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.Header > div {
+  display: flex;
+  align-items: center;
+}
+
+.Header > div > img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.Header > div h4 {
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.Header > div p {
+  font-size: 10px;
+  font-family: "Nunito", sans-serif;
+  line-height: 14px;
+  font-weight: 100;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+}
+
+.Content .description {
+  margin-top: 16px;
+  margin-bottom: 12px;
+  font-family: heeboregular;
+  font-size: 15px;
+  line-height: 21px;
+}
+
+.Content > a > img {
+  width: 100%;
+  height: 339px;
+  object-fit: cover;
+}
+
+.Footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.Footer button {
+  border: none;
+  border-radius: 50%;
+  background-color: #f5f6f6;
+  vertical-align: middle;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  margin-left: 12px;
+  position: relative;
+}
+
+.Footer button img {
+  width: 20px;
+}
+
+.Footer button:last-of-type img {
+  width: 16px;
+}
+
+.Footer button span {
+  position: absolute;
+  color: rgba(251, 251, 251, 1);
+  top: -10px;
+  border-radius: 50%;
+  font-size: 9px;
+  font-family: "Nunito", sans-serif;
+  padding: 3px;
+  vertical-align: middle;
+}
+
+.Footer button span.happy {
+  background-color: rgba(79, 145, 196, 1);
+}
+
+.Footer button span.sad {
+  background-color: rgba(196, 79, 79, 1);
+}
+
+.Footer button span.comments {
+  background-color: rgba(58, 58, 58, 1);
+}
+
+.Content > a > h2 {
+  font-size: 23px;
+  font-family: heeboregular;
+  color: rgba(58, 58, 58, 1);
+  line-height: 29px;
+  padding: 0 12px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}

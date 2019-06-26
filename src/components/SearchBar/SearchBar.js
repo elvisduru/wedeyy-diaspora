@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./SearchBar.module.css";
-import searchIcon from "../../images/search.svg";
+import searchIcon from "../../images/magnifier.svg";
 
 const SearchBar = props => {
   return (

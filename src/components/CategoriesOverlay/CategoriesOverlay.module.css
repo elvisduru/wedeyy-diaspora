@@ -1,0 +1,103 @@
+.CategoriesOverlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 1004;
+  color: #3a3a3a;
+  padding: 17px 28px 17px 17px;
+}
+
+.CategoriesOverlay h2 {
+  font-size: 18px;
+  line-height: 27px;
+  font-family: heebobold;
+}
+
+.CategoriesOverlay h3 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: heeboregular;
+}
+
+.CategoriesOverlay p {
+  font-size: 10px;
+  line-height: 14px;
+  font-family: heebomedium;
+}
+
+.Body {
+  margin-top: 27px;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Categories {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.Category {
+  display: flex;
+  margin-bottom: 21px;
+  width: 100%;
+}
+
+.Category > div:last-child {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.Category > div:last-child > div:first-child {
+  border-bottom: 1px solid #eeeeee;
+  height: 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.Category > div:last-child > div:first-child > img {
+  position: absolute;
+  right: 0;
+}
+
+.dropdown {
+  background-color: #f8f9f9;
+  display: none;
+}
+
+.dropdown > div {
+  padding: 12px 24px;
+}
+
+.dropdown > div:not(:last-child) {
+  border-bottom: 0.3px solid #ebebeb;
+}
+
+.icon {
+  background-color: #f5f6f6;
+  padding: 15px;
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
