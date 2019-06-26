@@ -29,6 +29,8 @@
 
 .Body {
   padding: 10px;
+  overflow-y: scroll;
+  height: 100%;
 }
 
 .dropdownBox,
